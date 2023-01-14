@@ -1,0 +1,160 @@
+:root{
+    --black:#1c1c1c;
+    --gray:#919191;
+    --light-gray:#ebebeb;
+    --pink:#ff214f;
+}
+body{
+    background-color: var(--light-gray);
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;   
+}
+nav>ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.section-primary{
+    padding: 14rem 25px;
+    background-color: var(--light-gray);
+}
+.section-secondary{
+    padding: 14rem 25px;
+    background-color: var(--black);
+}
+.section-title-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.section-title-primary,
+.section-title-secondary,
+.section-title-tertiry{
+    flex-shrink: 0;
+}
+.section-title-primary{
+    color: var(--black);
+}
+.section-title-secondary{
+    color: var(--pink);
+}
+.section-title-tertiry{
+    color: var(--light-gray);
+}
+
+.line-primary, 
+.line-secondary,
+.line-tertiry{
+    width: 100%;
+    height: 1px;
+    margin-left: 5px;
+    
+}
+.line-primary{
+    background-color: var(--black);
+
+}
+.line-secondary{
+    background-color: var(--pink);
+}
+.line-tertiry{
+    background-color: var(--light-gray);
+}
+
+.section-text-primary,
+.section-text-secondary,
+.section-text-tertiry{
+    font-size: 3rem;
+    font-weight: 300;
+}
+.section-text-primary{
+    color: var(--black);
+}
+.section-text-secondary{
+    color: var(--pink);
+}
+.section-text-tertiry{
+    color: var(--light-gray);
+}
+
+.photo-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.photo-gallery>img{
+    height: 100%;
+    width: 100%;
+}
+.long-img{
+    grid-row: span 2;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;   
+}
+.footer-text{
+    font-size: .8rem;
+    font-weight: 300;
+}
+footer>ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+
+
+@media only screen and (max-width:800px) {
+    nav{
+        flex-direction: column;
+    }
+    .photo-gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .line-primary,
+    .line-secondary,
+    .line-tertiry{
+        display: none;
+    }
+
+    .section-title-container{
+        justify-content: center;
+    }
+
+    .section-text-primary,
+    .section-text-secondary,
+    .section-text-tertiry{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .logo-container{
+        justify-content: center;
+    }
+    
+}
